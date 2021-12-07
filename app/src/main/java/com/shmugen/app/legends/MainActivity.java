@@ -14,21 +14,19 @@ import com.shmugen.app.legends.common.Shared;
 import com.shmugen.app.legends.engine.ScreenController;
 import com.shmugen.app.legends.fragments.MenuFragment;
 import com.shmugen.app.legends.fragments.LevelFragment;
+import com.shmugen.app.legends.utils.Utils;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView mBackGroundImage;
+    private ImageView mBackgroundImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mBackGroundImage = findViewById(R.id.background_image);
-
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.background3);
-        mBackGroundImage.setImageBitmap(bitmap);
+        mBackgroundImage = findViewById(R.id.background_image);
 
         Shared.context = getApplicationContext();
         Shared.activity = this;
@@ -36,27 +34,21 @@ public class MainActivity extends AppCompatActivity {
         //параметры utils для обработки растовых изображений высчитать и получить сразу, чтобы каждую картинку подгонять под готовые
         //параметры
 
+        setBackGroungImage();
         ScreenController.openScreen(ScreenController.Screen.MENU);
 
     }
 
 
-/*    private void setBackGroungImage(){
+    private void setBackGroungImage(){
 
-        int widthPixels = getApplicationContext().getResources().getDisplayMetrics().widthPixels;
-        int heightPixels = getApplicationContext().getResources().getDisplayMetrics().heightPixels;
-
-        Bitmap bitmap = getBitmap(widthPixels, heightPixels);
-
-        int mPhotoWidth = bitmap.getWidth();
-        int mPhotoHeight = bitmap.getHeight();
-// присваиваем ImageView
-        imageView.setImageBitmap(bitmap);
-
-
-        mBackGroundImage.setImageBitmap(bitmap);
+        Bitmap bitmap = Utils.scaleDown(R.drawable.background, Utils.screenWidth(), Utils.screenHeight());
+        bitmap = Utils.crop(bitmap, Utils.screenHeight(), Utils.screenWidth());
+        bitmap = Utils.downscaleBitmap(bitmap, 2);
+        mBackgroundImage.setImageBitmap(bitmap);
     }
 
+    /*
     private Bitmap getBitmap(int width, int height){
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inSampleSize = calculeteSampleSize(options, width, height);

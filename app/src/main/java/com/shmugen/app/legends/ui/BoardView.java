@@ -20,14 +20,12 @@ public class BoardView extends LinearLayout {
 
     public BoardView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        setOrientation(LinearLayout.VERTICAL);
-        setGravity(Gravity.CENTER);
-        /*int margin = getResources().getDimensionPixelSize(R.dimen.margine_top);
+        int margin = getResources().getDimensionPixelSize(R.dimen.margine_top);
         int padding = getResources().getDimensionPixelSize(R.dimen.board_padding);
-        mScreenHeight = getResources().getDisplayMetrics().heightPixels - margin - padding*2;
+/*        mScreenHeight = getResources().getDisplayMetrics().heightPixels - margin - padding*2;
         mScreenWidth = getResources().getDisplayMetrics().widthPixels - padding*2 - Utils.px(20);
-        mViewReference = new HashMap<Integer, TileView>();*/
-        setClipToPadding(false);
+        mViewReference = new HashMap<Integer, TileView>();
+        setClipToPadding(false);*/
     }
 
     public static BoardView fromXml(Context context, ViewGroup parent) {
