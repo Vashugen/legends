@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         //параметры
 
         setBackGroungImage();
-        ScreenController.openScreen(ScreenController.Screen.MENU);
+        ScreenController.getInstance().openScreen(ScreenController.Screen.MENU);
 
     }
 
