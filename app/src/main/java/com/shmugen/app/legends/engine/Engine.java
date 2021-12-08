@@ -2,12 +2,18 @@ package com.shmugen.app.legends.engine;
 
 public class Engine {
 
+    private ScreenController mScreenController;
+
+    public Engine() {
+        mScreenController = ScreenController.getInstance();
+    }
+
     public static void startGameEvent(){
-        ScreenController.openScreen(ScreenController.Screen.LEVEL);
+        ScreenController.getInstance().openScreen(ScreenController.Screen.LEVEL);
     }
 
     public static void oneLevelEvent(){
-        ScreenController.openScreen(ScreenController.Screen.GAME);
+        ScreenController.getInstance().openScreen(ScreenController.Screen.GAME);
        //пока история одна
     }
 

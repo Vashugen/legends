@@ -10,11 +10,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp" >
-        </RelativeLayout>
-
         <FrameLayout
             android:id="@+id/game_container"
             android:layout_width="match_parent"
@@ -22,6 +17,10 @@
             android:layout_weight="1" >
         </FrameLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp" >
+        </RelativeLayout>
 
 
     </LinearLayout>

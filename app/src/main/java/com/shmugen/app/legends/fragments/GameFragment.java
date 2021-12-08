@@ -33,6 +33,6 @@ public class GameFragment extends Fragment {
 
     private void buildBoard() {
         Game game = new Game();
-        mBoardView.setBoard(game);
+        //mBoardView.setBoard(game);
     }
 }

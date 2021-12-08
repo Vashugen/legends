@@ -35,13 +35,12 @@ public class MainActivity extends AppCompatActivity {
         //параметры
 
         setBackGroungImage();
-        ScreenController.openScreen(ScreenController.Screen.MENU);
+        ScreenController.getInstance().openScreen(ScreenController.Screen.MENU);
 
     }
 
 
     private void setBackGroungImage(){
-
         Bitmap bitmap = Utils.scaleDown(R.drawable.background, Utils.screenWidth(), Utils.screenHeight());
         bitmap = Utils.crop(bitmap, Utils.screenHeight(), Utils.screenWidth());
         bitmap = Utils.downscaleBitmap(bitmap, 2);
