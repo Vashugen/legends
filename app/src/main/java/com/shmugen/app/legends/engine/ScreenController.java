@@ -12,23 +12,13 @@ import com.shmugen.app.legends.fragments.MenuFragment;
 
 public class ScreenController {
 
-    private static ScreenController mInstance = null;
-
     public enum Screen {
         MENU,
         LEVEL,
         GAME
     }
 
-    public static ScreenController getInstance(){
-        if(mInstance == null){
-            mInstance = new ScreenController();
-        }
-
-        return mInstance;
-    }
-
-    public void openScreen(Screen screen){
+    public static void openScreen(Screen screen){
 
         Fragment fragment = getFragment(screen);
         FragmentManager fragmentManager = Shared.activity.getSupportFragmentManager();

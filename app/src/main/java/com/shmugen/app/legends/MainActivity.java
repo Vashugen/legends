@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void setBackGroungImage(){
-
         Bitmap bitmap = Utils.scaleDown(R.drawable.background, Utils.screenWidth(), Utils.screenHeight());
         bitmap = Utils.crop(bitmap, Utils.screenHeight(), Utils.screenWidth());
         bitmap = Utils.downscaleBitmap(bitmap, 2);
