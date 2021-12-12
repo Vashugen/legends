@@ -41,8 +41,6 @@ public class ScreenController {
         switch (screen){
             case MENU:
                 return new MenuFragment();
-            case LEVEL:
-                return new LevelFragment();
             case GAME:
                 return new GameFragment();
         }

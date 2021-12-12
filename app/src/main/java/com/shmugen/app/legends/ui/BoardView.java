@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.shmugen.app.legends.R;
-import com.shmugen.app.legends.model.Game;
 import com.shmugen.app.legends.utils.Utils;
 
 import java.util.HashMap;
@@ -37,7 +36,7 @@ public class BoardView extends LinearLayout {
     }
 
     public static BoardView fromXml(Context context, ViewGroup parent) {
-        return (BoardView) LayoutInflater.from(context).inflate(R.layout.board_view, parent, false);
+        return (BoardView) LayoutInflater.from(context).inflate(R.layout.game_view, parent, false);
     }
 
 /*      public void setBoard(Game game) {

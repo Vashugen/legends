@@ -16,23 +16,20 @@ import com.shmugen.app.legends.ui.BoardView;
 
 public class GameFragment extends Fragment {
 
-    private BoardView mBoardView;
+    private BoardView mBoard;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.game_fragment, container, false);
-        FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.game_container);
-        mBoardView = BoardView.fromXml(getActivity().getApplicationContext(), view);
-        frameLayout.addView(mBoardView);
+        FrameLayout gameContainer = (FrameLayout) view.findViewById(R.id.game_container);
 
-        buildBoard();
+        ViewGroup game = (ViewGroup) LayoutInflater.from(getActivity().getApplicationContext()).inflate(R.layout.game_view, view);
+        
+        gameContainer.addView(game);
+
 
         return view;
     }
 
-    private void buildBoard() {
-        Game game = new Game();
-        mBoardView.setBoard(game);
-    }
 }

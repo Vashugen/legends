@@ -9,7 +9,7 @@ public class Engine {
     }
 
     public static void startGameEvent(){
-        ScreenController.getInstance().openScreen(ScreenController.Screen.LEVEL);
+        ScreenController.getInstance().openScreen(ScreenController.Screen.GAME);
     }
 
     public static void oneLevelEvent(){

@@ -5,20 +5,21 @@
     android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/game_board"
+        android:id="@+id/content_board"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <!--настройки-->
-        <RelativeLayout
+        <!--text-->
+        <FrameLayout
+            android:id="@+id/text_container"
             android:layout_width="match_parent"
             android:layout_height="70dp" >
-        </RelativeLayout>
+        </FrameLayout>
 
-        <!--и текст, и пикча-->
+        <!--pics-->
         <FrameLayout
-            android:id="@+id/game_container"
+            android:id="@+id/pics_container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
