@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/game_board"
+    <!--и текст, и пикча-->
+    <!--        <FrameLayout
+                android:id="@+id/game_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </FrameLayout>-->
+    <!--pics-->
+    <ImageView
+        android:id="@+id/pics_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:layout_weight="1"
+        android:src="@mipmap/pics_1"></ImageView>
 
-        <!--настройки-->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp" >
-        </RelativeLayout>
+    <!--text-->
+    <ImageView
+        android:id="@+id/text_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:src="@mipmap/text_1"></ImageView>
 
-        <!--и текст, и пикча-->
-        <FrameLayout
-            android:id="@+id/game_container"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-        </FrameLayout>
-
-    </LinearLayout>
-
-</FrameLayout>
+</LinearLayout>
