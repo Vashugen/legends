@@ -37,6 +37,15 @@ public class MainActivity extends AppCompatActivity {
         setBackGroungImage();
         ScreenController.getInstance().openScreen(ScreenController.Screen.MENU);
 
+        /*
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeResource(Shared.context.getResources(), R.drawable.background);
+        options.inJustDecodeBounds = false;
+        Bitmap bitmap = BitmapFactory.decodeResource(Shared.context.getResources(), R.drawable.background, options);
+        mBackgroundImage.setImageBitmap(bitmap);*/
+
+
     }
 
 
